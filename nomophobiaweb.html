@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISCONNECT: A DIGITAL CHALLENGE</title>
+    <link rel="stylesheet" href="nomophobiaweb.css">
+
+    <style>
+        @font-face {
+            font-family: 'Neue Haas Grotesk';
+            src: url('./fonts/NeueHaasGrotesk-Regular.woff2') format('woff2'),
+                 url('./fonts/NeueHaasGrotesk-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        p {
+            font-family: 'Neue Haas Grotesk', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            font-size: 15px;
+        }
+     
+
+        body {
+            font-family: 'Neue Haas Grotesk', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            font-size: 15px;
+        }
+        
+
+        h1, h2 {
+            font-family: 'Neue Haas Grotesk', sans-serif;
+            font-size: 2.5rem;
+            color: #FFF;
+            letter-spacing: 5px;
+           
+            text-transform: uppercase;
+            opacity: 0;
+            animation: fadeIn 2s ease forwards;
+            width:80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h3 {
+            font-family: 'Neue Haas Grotesk', sans-serif;
+            font-size: 20PX;
+            color: #FFF;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            opacity: 0;
+            animation: fadeIn 2s ease forwards;
+            width:100%;
+            margin-left: 5px;
+            margin-right: auto;
+        }
+
+
+        .content {
+            opacity: 0;
+            animation: fadeIn 3s ease forwards;
+            animation-delay: 2s;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            width:80%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .button {
+            background-color: #fff;
+            color: #000;
+            padding: 20px 40px;
+            font-size: 18px;
+            text-transform: uppercase;
+            border: 2px solid #fff;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Neue Haas Grotesk', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .button:hover {
+            background-color: transparent;
+            color: #fff;
+            box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .button:active {
+            transform: translateY(4px);
+        }
+
+        .timer {
+            font-family: 'Neue Haas Grotesk', sans-serif;
+            font-size: 120px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            color: #fff;
+            margin-top: 50px;
+            transition: color 0.5s ease;
+            opacity: 0;
+            animation: fadeIn 2s ease forwards;
+        }
+
+        .timer-warning {
+            color: #E94E77;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 3s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+
+        .timer-section p {
+            opacity: 0;
+            animation: fadeIn 3s ease forwards;
+            animation-delay: 5s;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            max-width: 600px;
+            width:80%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 15px;
+        }
+        .fade-in {
+    opacity: 1;
+    animation: fadeOut 5s forwards; /* Triggers fade-out after a few seconds */
+    animation-delay: 6s; /* Waits 3 seconds before starting the fade-out */
+}
+
+/* Fade-out animation */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>DISCONNECT:</h1>
+        <h3>A DIGITAL CHALLENGE</h3>
+        <div class="content fade-in" id="fade-content">
+            <br><p>We live in a world where technology connects us every second. The fear of being disconnected, known as nomophobia, has grown exponentially. How does it affect our minds and relationships? This challenge is just a first step toward a deeper reflection on the need to disconnect and give ourselves mental space.</p>
+            <p><strong><br>We invite you to reflect on your relationship with technology while engaging in this interactive experience.</strong></p>
+        </div>
+
+        <button class="button" id="startBtn">Start the Challenge</button>
+
+        <div id="timerSection" class="hidden timer-section">
+            <h2>Disconnect Time!</h2>
+            <div id="timer" class="timer">05:00</div>
+            <br><p><i>If you feel anxious or want to check your phone, reflect: Why do you need that digital validation?
+               <br>  <br>This question is at the heart of understanding nomophobia and how our devices shape our sense of self-worth. (C8H11NO2) invites you to explore the effects of nomophobia, offering reflections, insights, and exercises to help you understand and manage your relationship with technology. 
+
+                 Take a step back and discover more within these pages.                 
+            </i></p>
+        </div>
+
+        <div id="reflectionSection" class="hidden">
+            <h2 class="fade-in">Final Reflection</h2>
+            <p class="fade-in">Now that you've experienced a few minutes of disconnection, reflect on your experience. In the physical book accompanying this digital experience, you will find more about the psychological impact of nomophobia, interviews, testimonies, and practical exercises to cope with digital anxiety.</p>
+            <p><strong>Disconnection is not only necessary, but it can also be transformative.</strong></p>
+            <button class="button" onclick="window.location.href='https://linktobook.com'">Read more in the physical book</button>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 300; // 5 minutes in seconds
+        const startBtn = document.getElementById('startBtn');
+        const timerSection = document.getElementById('timerSection');
+        const timerDisplay = document.getElementById('timer');
+        const reflectionSection = document.getElementById('reflectionSection');
+        const content = document.querySelector('.content');
+        const titles = document.querySelectorAll('h1, h2');
+
+        startBtn.addEventListener('click', function() {
+            startBtn.classList.add('hidden');
+            content.classList.remove('fade-in');
+            titles.forEach(title => title.classList.add('hidden'));
+            timerSection.classList.remove('hidden');
+            startTimer();
+        });
+
+        function startTimer() {
+            const interval = setInterval(function() {
+                timeLeft--;
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+                if (timeLeft <= 60) {
+                    timerDisplay.classList.add('timer-warning');
+                    timerDisplay.classList.add('blink');
+                }
+
+                if (timeLeft <= 0) {
+                    clearInterval(interval);
+                    timerSection.classList.add('hidden');
+                    reflectionSection.classList.remove('hidden');
+                }
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>
+
+</body>
+</html>
